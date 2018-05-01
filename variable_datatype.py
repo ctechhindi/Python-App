@@ -1,15 +1,5 @@
-"""
-Get Started With Python
--------------------------
-Python Demo App
-"""
-'''
-Import Another Class File
-from FILENAME import CLASS_NAME FUNCTION_NAME
-'''
 from functions import Functions
 root = Functions()
-
 
 # Variable in Python
 a = 18

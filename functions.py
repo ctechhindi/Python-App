@@ -5,6 +5,6 @@ class Functions:
 
     # Python Class Functions
     def info(self, msg):
-        print("------------------------------------------------------")
+        print("\n------------------------------------------------------")
         print("#", msg, "\n")
         pass
