@@ -287,3 +287,243 @@ print(1 in y)
 print('a' in y)
 # Output: False
 ```
+---
+
+## Python if...else Statement
+
+Syntax
+
+```
+if test expression:
+    statement(s)
+```
+
+Syntax
+
+```
+if test expression:
+    Body of if
+else:
+    Body of else
+```
+
+Syntax
+
+```
+if test expression:
+    Body of if
+elif test expression:
+    Body of elif
+else: 
+    Body of else
+```
+---
+
+## Python for Loop
+
+Syntax
+
+```
+for val in sequence:
+	Body of for
+```
+
+```py
+# List of numbers
+numbers = [7, 4, 8, 2]
+
+# variable to store the sum
+sum = 0
+
+# iterate over the list
+for val in numbers:
+	sum = sum+val
+
+print("The sum is", sum)
+# Output: The sum is 21
+```
+
+### The range() function
+
+We can generate a sequence of numbers using range() function. range(10) will generate numbers from 0 to 9 (10 numbers).
+
+We can also define the start, stop and step size as `range(start,stop,step size)`. step size defaults to 1 if not provided.
+
+```py
+print(range(10))
+# Output: range(0, 10)
+
+print(list(range(10)))
+# Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+print(list(range(2, 8)))
+# Output: [2, 3, 4, 5, 6, 7]
+
+print(list(range(2, 20, 3)))	
+# Output: [2, 5, 8, 11, 14, 17]
+```
+
+```py
+fruits = ['Apple', 'Mango', 'Orange']
+
+# iterate over the list using index
+for i in range(len(fruits)):
+	print("I like", fruits[i])
+
+# Output :
+I like Apple
+I like Mango
+I like Orange
+```
+
+### for loop with else
+
+```py
+digits = [a, b, c]
+
+for i in digits:
+    print(i)
+else:
+    print("No items left.")
+
+# Output :
+a
+b
+c
+No items left.
+```
+
+---
+
+## Python while Loop
+
+Syntax
+
+```
+while test_expression:
+    Body of while
+```
+
+
+```py
+# Program to add natural
+# numbers upto 
+# sum = 1+2+3+...+n
+
+n = 10
+sum = 0
+i = 1
+
+while i <= n:
+    sum = sum + i
+    i = i+1    # update counter
+
+print("The sum is", sum)
+# Output : The sum is 55
+```
+
+### while loop with else
+
+```py
+counter = 0
+
+while counter < 3:
+    print("Inside loop")
+    counter = counter + 1
+else:
+    print("Inside else")
+
+# Output :
+Inside loop
+Inside loop
+Inside loop
+Inside else
+```
+
+---
+
+## Python break and continue
+
+### Python break statement
+
+Syntax
+
+```
+break
+```
+
+```py
+# Use of break statement inside loop
+
+for val in "string":
+    if val == "i":
+        break
+    print(val)
+
+print("The end")
+
+# Output :
+s
+t
+r
+The end
+```
+
+### Python continue statement
+
+Syntax
+
+```
+continue
+```
+
+```py
+# Program to show the use of continue statement inside loops
+
+for val in "string":
+    if val == "i":
+        continue
+    print(val)
+
+print("The end")
+
+# Output :
+s
+t
+r
+n
+g
+The end
+```
+
+---
+
+## Python pass statement
+
+In Python programming, pass is a null statement
+
+Syntax 
+
+```
+pass
+```
+
+```py
+# pass is just a placeholder for
+# functionality to be added later.
+sequence = {'p', 'a', 's', 's'}
+for val in sequence:
+    pass
+```
+
+We can do the same thing in an empty function or class as well.
+
+```py
+def function(args):
+    pass
+```
+
+```py
+class example:
+    pass
+```
