@@ -140,3 +140,150 @@ print(sys.path)
  'C:\\Users\\G.one\\.ipython'
 ]
 ```
+---
+
+## Python Operators
+
+### Arithmetic operators
+
+| Operator | Meaning |
+| -------- | ------- |
+| + | Add two operands or unary plus |
+| - | Subtract right operand from the left or unary minus |
+| * | Multiply two operands |
+| / | Divide left operand by the right one (always results into float)	 |
+| % | Modulus - remainder of the division of left operand by the right |
+| // | Floor division - division that results into whole number adjusted to the left in the number line |
+| ** | Exponent - left operand raised to the power of right |
+
+```py
+x = 25
+y = 7
+
+print('x + y =',x+y)
+# Output: x + y = 32
+
+print('x - y =',x-y)
+# Output: x - y = 18
+
+print('x * y =',x*y)
+# Output: x * y = 175
+
+print('x / y =',x/y)
+# Output: x / y = 3.5714285714285716
+
+print('x // y =',x//y)
+# Output: x // y = 3
+
+print('x ** y =',x**y)
+# Output: x ** y = 6103515625
+```
+
+### Comparison operators
+
+| Operator | Meaning |
+| -------- | ------- |
+| > | Greater that - True if left operand is greater than the right |
+| < | Less that - True if left operand is less than the right |
+| == | Equal to - True if both operands are equal |
+| !- | Not equal to - True if operands are not equal |
+| >= | Greater than or equal to - True if left operand is greater than or equal to the right |
+| <= | Less than or equal to - True if left operand is less than or equal to the right |
+
+
+```py
+a = 15
+b = 20
+
+print('a > b  is',a>b)
+# Output: a > b is False
+
+print('a < b  is',a<b)
+# Output: a < b is True
+
+print('a == b is',a==b)
+# Output: a == b is False
+
+print('a != b is',a!=b)
+# Output: a != b is True
+
+print('a >= b is',a>=b)
+# Output: a >= b is False
+
+print('a <= b is',a<=b)
+# Output: a <= b is True
+```
+
+### Logical operators
+
+| Operator | Meaning |
+| -------- | ------- |
+| and | True if both the operands are true |
+| or | True if either of the operands is true |
+| not | True if operand is false (complements the operand) |
+
+
+### Bitwise operators
+
+Bitwise operators act on operands as if they were string of binary digits. It operates bit by bit, hence the name.
+
+### Assignment operators
+
+| Operator | Example | Equivatent to |
+| -------- | ------- | ------------- |
+| += | x += 2 | x = x + 2 |
+| -= | x -= 2 | x = x - 2 |
+
+and more..
+
+### Special operators
+
+> Identity operators
+
+| Operator | Meaning |
+| -------- | ------- |
+| is | True if the operands are identical (refer to the same object) |
+| is not | True if the operands are not identical (do not refer to the same object) |
+
+```py
+x1 = 2
+y1 = 2
+x2 = 'Python'
+y2 = 'Python'
+x3 = [1,2,3]
+y3 = [1,2,3]
+
+print(x1 is not y1)
+# Output: False
+
+print(x2 is y2)
+# Output: True
+
+print(x3 is y3)
+# Output: False
+```
+
+
+> Membership operators
+
+| Operator | Meaning |
+| -------- | ------- |
+| in | True if value/variable is found in the sequence |
+| not in | True if value/variable is not found in the sequence |
+
+```py
+x = 'Python App'
+y = {1:'x',2:'y'}
+
+print('P' in x)
+# Output: True
+
+print('app' not in x)
+# Output: True
+
+print(1 in y)
+# Output: True
+
+print('a' in y)
+# Output: False
+```
