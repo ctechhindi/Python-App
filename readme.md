@@ -1,529 +1,416 @@
-# Python App
-[GitHub](https://github.com/jeevan15498/Python-App)
+# Python Programimg Language
 
-[IPython](https://ipython.org/install.html)
+Python is high-level programming language, with applications in numerous areas,including web programming, scripting, scientific computing and artificial intelligence.
 
-## Requirements
+> Python is processed at runtime by the interpreter, There is no need to compile your program before executing it.
 
-- Using Python 3.6.5
+## Version
 
-# Doc
+Python has several different implementations, written in various languages. `CPython`, is the most popular by far.
 
-## Variable\DataType in Python
-
-```py
-a = 18
-b = "Google.com"; c = 45.90
-d = {1:'value','key':2}
-```
-
-__Assigning multiple values to multiple variables__
-```py
-a, b, c = 5, 3.2, "Hello"
-print(a, b, c)
-```
-
-__Multi-line statement__
-```py
-a = 1 + 2 + 3 + \
-    4 + 5 + 6 + \
-    7 + 8 + 9
-```
-
-### Data types in Python
-```py
-print(a, "is of type", type(a))
-print(b, "is of type", type(b))
-print(c, "is of type", type(c))
-print("d is of type", type(d))
-
-# Output
-# 45 is of type <class 'int'>
-# 3.2 is of type <class 'float'>
-# Hello is of type <class 'str'>
-# {1: 'value', 'key': 2} is of type <class 'dict'>
-```
-
-__Conversion between data types__
+## Print Statement [Output Text]
 
 ```py
-float(5) # Output : 5.0
-float('2.5') # Output : 2.5
-int(10.6) # Output : 10
-int(-10.6) # Output : -10
-str(25) # Output : '25'
-set([1,2,3]) # Output : {1, 2, 3}
-tuple({5,6,7}) # Output : (5, 6, 7)
-list('hello') # Output : ['h', 'e', 'l', 'l', 'o']
-dict([[1,2],[3,4]]) # Output : {1: 2, 3: 4}
-dict([(3,26),(4,44)]) # Output : {3: 26, 4: 44}
+print('Hello World')
+print  "Hello World"
 ```
----
 
+## Operations
 
-## Python Input, Output and Import
+Python has the capability of carrying out calculations.
+
+```css
+>>> 2 + 2
+4
+>>> 5 + 4 - 3
+6
+>>> 2 * (3 + 4)
+14
+>>> 10 / 2
+5.0 # return float
+>>> 5 ** 2 # Power (Exponentiation)
+25
+```
+
+> Using a single slash to divide numbers produces a decimal (or `float`, as it is called in programming). We'll have more about floats in a letter lesson.
+
+Dividing by zero in Python produces an error, as no answer can be calculated.
+
+```css
+>>> 11 / 0
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+```
+
+## Input and Variables
+
+Command-line String Input
 
 ```py
-print('This message is output to the screen')
-
-# Output: This message is output to the screen
+print  "Hello"
+user_reply =  raw_input("Who goes there?")
+print  "You may pass,", user_reply
 ```
 
-The actual syntax of the print() function is
+Here is a program to show examples of variables:
 
-```
-print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
+```py
+a =  123.4
+b23 =  'Span'
+first_name =  "Jeevan"
+b =  432
+c = a + b
 ```
 
 ```py
-print(1,2,3,4)
-# Output: 1 2 3 4
-
-print(1,2,3,4,sep='-')
-# Output: 1-2-3-4
-
-print(1,2,3,4,sep='/',end=';')
-# Output: 1/2/3/4;
+number =  input("Type in a number: ")
+text =  raw_input("Type in a String :")
+print  "Number is a", type(number)
 ```
 
+>  `type(variable)` : show variable data type
 
-### Output formatting
+Here is the list of some string operations:
+
+| Operation | Symbol | Example |
+| --------- | ------ | ------- |
+| Repertition | * | "i" * 5 == "iiiii" |
+| Concatenation | + | "Hello, " + "World" == "Hello, World" |
+
+## Python  NumbersThere are three numeric types in Python:
+
+-   int
+-   float
+-   complex
 
 ```py
-print('I love {0} and {1}'.format('php','java'))
-# Output: I love php and java
-
-print('I love {1} and {0}'.format('php','java'))
-# Output: I love java and php
-
-print('Welcome, {firstname} {lastname}'.format(firstname = 'Jeevan', lastname = 'Lal'))
-# Output: Welcome, Jeevan Lal
-
-f = 17.89585252
-print('The value of f is %3.2f' %f)
-# Output: The value of f is 17.90
-
-print('The value of f is %3.4f' %f)
-# Output: The value of f is 17.8959
+x = 1  # int  
+y = 2.8  # float  
+z = 1j # complex
 ```
+> To verify the type of any object in Python, use the `type()` function
 
+- `Float` can also be scientific numbers with an "e" to indicate the power of 10. ex : `y = 35e3`
+- `Complex` numbers are written with a "j" as the imaginary part. ex ; `y = 5j`
 
-### Python Input
+## Python  Casting
+
+Specify a Variable Type
+
+-   int()
+-   float()
+-   str()
 
 ```py
-string = input('Enter a value: ')
-# Output: Enter a value: __ENTER VALUE__
-
-print(Your Enter Value : string)
-# Output: Your Enter Value : __ENTER VALUE__
+y = int(2.8) # y will be 2
+z = float("3") # z will be 3.0
+z = str(3.0) # z will be '3.0'
 ```
 
-### Python Import
+## Python  Strings
 
-A module is a file containing Python definitions and statements. Python modules have a filename and end with the extension .py.
+String literals in python are surrounded by either single quotation marks, or double quotation marks.
+
+`'hello'`  is the same as  `"hello"`.
+
+### Methods
+
+- Get the character at position
 
 ```py
-import math
-import sys
-
-print(math.pi)
-print(sys.path)
-
-# Output: 3.141592653589793
-# Output:
-['',
- 'C:\\Users\\G.one\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\ipython.exe',
- 'c:\\users\\g.one\\appdata\\local\\programs\\python\\python36-32\\python36.zip',
- 'c:\\users\\g.one\\appdata\\local\\programs\\python\\python36-32\\DLLs',
- 'c:\\users\\g.one\\appdata\\local\\programs\\python\\python36-32\\lib',
- 'c:\\users\\g.one\\appdata\\local\\programs\\python\\python36-32',
- 'C:\\Users\\G.one\\.ipython'
-]
+a = "Hello, World!"  
+print(a[1]) # Output : e
+print(b[2:5]) # Output : llo
 ```
----
-
-## Python Operators
-
-### Arithmetic operators
-
-| Operator | Meaning |
-| -------- | ------- |
-| + | Add two operands or unary plus |
-| - | Subtract right operand from the left or unary minus |
-| * | Multiply two operands |
-| / | Divide left operand by the right one (always results into float)	 |
-| % | Modulus - remainder of the division of left operand by the right |
-| // | Floor division - division that results into whole number adjusted to the left in the number line |
-| ** | Exponent - left operand raised to the power of right |
+- The `strip()` method removes any whitespace from the beginning or the end.
+- The `len()` method returns the length of a string.
+- The `lower()` method returns the string in lower case.
+- The `upper()` method returns the string in upper case.
+- The `replace()` method replaces a string with another string.
+- The `split()` method splits the string into substrings if it finds instances of the separator
 
 ```py
-x = 25
-y = 7
+a = " Hello, World! "  
+print(a.strip()) # returns "Hello, World!"
+print(len(a))
+print(a.lower())
+print(a.upper())
+print(a.replace("H", "J"))
+print(a.split(",")) # returns ['Hello', ' World!']
+```
+## Python  Operators
 
-print('x + y =',x+y)
-# Output: x + y = 32
+### Python Comparison Operators
 
-print('x - y =',x-y)
-# Output: x - y = 18
-
-print('x * y =',x*y)
-# Output: x * y = 175
-
-print('x / y =',x/y)
-# Output: x / y = 3.5714285714285716
-
-print('x // y =',x//y)
-# Output: x // y = 3
-
-print('x ** y =',x**y)
-# Output: x ** y = 6103515625
+Comparison operators are used to compare two values:
+```py
+==	,Equal,	x == y	
+!=	,Not equal,	x != y	
+>	,Greater than,	x > y	
+<	,Less than,	x < y	
+>=	,Greater than or equal to,	x >= y	
+<=	,Less than or equal to,	x <= y
 ```
 
-### Comparison operators
+### Python Logical Operators
 
-| Operator | Meaning |
-| -------- | ------- |
-| > | Greater that - True if left operand is greater than the right |
-| < | Less that - True if left operand is less than the right |
-| == | Equal to - True if both operands are equal |
-| !- | Not equal to - True if operands are not equal |
-| >= | Greater than or equal to - True if left operand is greater than or equal to the right |
-| <= | Less than or equal to - True if left operand is less than or equal to the right |
-
+Logical operators are used to combine conditional statements:
 
 ```py
-a = 15
-b = 20
-
-print('a > b  is',a>b)
-# Output: a > b is False
-
-print('a < b  is',a<b)
-# Output: a < b is True
-
-print('a == b is',a==b)
-# Output: a == b is False
-
-print('a != b is',a!=b)
-# Output: a != b is True
-
-print('a >= b is',a>=b)
-# Output: a >= b is False
-
-print('a <= b is',a<=b)
-# Output: a <= b is True
+and ,Returns True if both statements are true,	x < 5 and  x < 10	
+or  ,Returns True if one of the statements is true,	x < 5 or x < 4	
+not ,Reverse the result, returns False if the result is true, not(x < 5 and x < 10)
 ```
 
-### Logical operators
+### Python Identity Operators
 
-| Operator | Meaning |
-| -------- | ------- |
-| and | True if both the operands are true |
-| or | True if either of the operands is true |
-| not | True if operand is false (complements the operand) |
-
-
-### Bitwise operators
-
-Bitwise operators act on operands as if they were string of binary digits. It operates bit by bit, hence the name.
-
-### Assignment operators
-
-| Operator | Example | Equivatent to |
-| -------- | ------- | ------------- |
-| += | x += 2 | x = x + 2 |
-| -= | x -= 2 | x = x - 2 |
-
-and more..
-
-### Special operators
-
-> Identity operators
-
-| Operator | Meaning |
-| -------- | ------- |
-| is | True if the operands are identical (refer to the same object) |
-| is not | True if the operands are not identical (do not refer to the same object) |
+Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location:
 
 ```py
-x1 = 2
-y1 = 2
-x2 = 'Python'
-y2 = 'Python'
-x3 = [1,2,3]
-y3 = [1,2,3]
-
-print(x1 is not y1)
-# Output: False
-
-print(x2 is y2)
-# Output: True
-
-print(x3 is y3)
-# Output: False
+is 	,Returns true if both variables are the same object,	x is y	
+is not	,Returns true if both variables are not the same object,	x is not y
 ```
 
+### Python Membership Operators
 
-> Membership operators
-
-| Operator | Meaning |
-| -------- | ------- |
-| in | True if value/variable is found in the sequence |
-| not in | True if value/variable is not found in the sequence |
+Membership operators are used to test if a sequence is presented in an object:
 
 ```py
-x = 'Python App'
-y = {1:'x',2:'y'}
-
-print('P' in x)
-# Output: True
-
-print('app' not in x)
-# Output: True
-
-print(1 in y)
-# Output: True
-
-print('a' in y)
-# Output: False
-```
----
-
-## Python if...else Statement
-
-Syntax
-
-```
-if test expression:
-    statement(s)
+in 	,Returns True if a sequence with the specified value is present in the object,	x in y	
+not in	,Returns True if a sequence with the specified value is not present in the object,	x not in y
 ```
 
-Syntax
+## Decisions
 
-```
-if test expression:
-    Body of if
+### if statement
+
+```py
+n =  input("Number ? ")
+if n <  0:
+	print  "The absolute valu of", n, "is", -n
 else:
-    Body of else
+	print  "The absolute valu of", n, "is", n
 ```
 
-Syntax
+>  `if, elif, else` : Multi if else statement
 
-```
-if test expression:
-    Body of if
-elif test expression:
-    Body of elif
-else: 
-    Body of else
-```
----
+#### Short Hand If
 
-## Python for Loop
-
-Syntax
-
-```
-for val in sequence:
-	Body of for
-```
+If you have only one statement to execute, you can put it on the same line as the if statement.
 
 ```py
-# List of numbers
-numbers = [7, 4, 8, 2]
-
-# variable to store the sum
-sum = 0
-
-# iterate over the list
-for val in numbers:
-	sum = sum+val
-
-print("The sum is", sum)
-# Output: The sum is 21
+if a > b: print("a is greater than b")
 ```
+#### Short Hand If ... Else
 
-### The range() function
-
-We can generate a sequence of numbers using range() function. range(10) will generate numbers from 0 to 9 (10 numbers).
-
-We can also define the start, stop and step size as `range(start,stop,step size)`. step size defaults to 1 if not provided.
+One line if else statement
 
 ```py
-print(range(10))
-# Output: range(0, 10)
-
-print(list(range(10)))
-# Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-print(list(range(2, 8)))
-# Output: [2, 3, 4, 5, 6, 7]
-
-print(list(range(2, 20, 3)))	
-# Output: [2, 5, 8, 11, 14, 17]
+print("A") if a > b else  print("B")
 ```
 
+One line if else statement, with 3 conditions
+
 ```py
-fruits = ['Apple', 'Mango', 'Orange']
-
-# iterate over the list using index
-for i in range(len(fruits)):
-	print("I like", fruits[i])
-
-# Output :
-I like Apple
-I like Mango
-I like Orange
+print("A") if a > b else  print("=") if a == b else  print("B")
 ```
 
-### for loop with else
+## 
+
+```pyDefining Functions
+
+In Python a function is defined using the def keyword:Decisions
+
+### if statement
 
 ```py
-digits = [a, b, c]
-
-for i in digits:
-    print(i)
+n =  input("Number ? ")
+if n <  0:
+	print  "The absolute valu of", n, "is", -n
 else:
-    print("No items left.")
-
-# Output :
-a
-b
-c
-No items left.
+	print  "The absolute valu of", n, "is", n
 ```
 
----
+>  `if, elif, else` : Multi if else statement
 
-## Python while Loop
-
-Syntax
-
-```
-while test_expression:
-    Body of while
-```
-
+## Defining Functions
 
 ```py
-# Program to add natural
-# numbers upto 
-# sum = 1+2+3+...+n
+def  hello():
+print  "Hello"
 
-n = 10
-sum = 0
-i = 1
+def  area(w, h):
+return w * h
 
-while i <= n:
-    sum = sum + i
-    i = i+1    # update counter
-
-print("The sum is", sum)
-# Output : The sum is 55
+def  print_welcome(name):
+print  "Welcome", name
 ```
+## Python Collections (Arrays)
 
-### while loop with else
+There are four collection data types in the Python programming language:
+
+*  `List` is a collection which is ordered and changeable. Allows duplicate members.
+*  `Tuple` is a collection which is ordered and unchangeable. Allows duplicate members.
+*  `Set` is a collection which is unordered and unindexed. No duplicate members.
+*  `Dictionary` is a collection which is unordered, changeable and indexed. No duplicate members.
+
+## Python Lists
+
+A list is a collection which is ordered and changeable. In Python lists are written with square brackets.
+
+``py
+thislist = ["apple",an", nt(thislist)
+print(thislist[1]) # Access Items
+thislist[1] =  "blackcurrant"  # Change Item Value
+```
+### Loop Through a List
+
+You can loop through the list items by using a `for` loop:
 
 ```py
-counter = 0
-
-while counter < 3:
-    print("Inside loop")
-    counter = counter + 1
-else:
-    print("Inside else")
-
-# Output :
-Inside loop
-Inside loop
-Inside loop
-Inside else
+thislist = ["apple", "banana", "cherry"]
+for x in thislist:
+print(x)
 ```
 
----
-
-## Python break and continue
-
-### Python break statement
-
-Syntax
+Output :
 
 ```
-break
+apple
+banana
+cherry
 ```
+
+### Check if Item Exists
 
 ```py
-# Use of break statement inside loop
-
-for val in "string":
-    if val == "i":
-        break
-    print(val)
-
-print("The end")
-
-# Output :
-s
-t
-r
-The end
+thislist = ["apple", "banana", "cherry"]
+if  "apple"  in thislist:
+	print("Yes, 'apple' is in the fruits list")
 ```
 
-### Python continue statement
+### List Length
 
-Syntax
-
-```
-continue
-```
+To determine how many items a list have, use the `len()` method:
 
 ```py
-# Program to show the use of continue statement inside loops
-
-for val in "string":
-    if val == "i":
-        continue
-    print(val)
-
-print("The end")
-
-# Output :
-s
-t
-r
-n
-g
-The end
+thislist = ["apple", "banana", "cherry"]
+print(len(thislist)) # Output : 3
 ```
 
----
+### List Methods Items
 
-## Python pass statement
+* To add an item to the end of the list, use the `append()` method.
+* To add an item at the specified index, use the `insert()` method.
+* The `remove()` method removes the specified item.
+* The `pop()` method removes the specified index, (or the last item if index is not specified).
+* The `del` keyword removes the specified index.
+* The `clear()` method empties the list.
 
-In Python programming, pass is a null statement
+  
 
-Syntax 
-
-```
-pass
-```
+> The `del` keyword can also delete the list completely
 
 ```py
-# pass is just a placeholder for
-# functionality to be added later.
-sequence = {'p', 'a', 's', 's'}
-for val in sequence:
-    pass
+thislist = ["apple", "banana", "cherry"]
+
+thislist.append("orange")
+thislist.insert(1, "orange")
+del thislist[0]
+del thislist # The del keyword can also delete the list completely
+thislist.clear()
+print(thislist)
 ```
 
-We can do the same thing in an empty function or class as well.
+## Python Tuples
+
+A tuple is a collection which is ordered and `unchangeable`. In Python tuples are written with round brackets.
 
 ```py
-def function(args):
-    pass
+thistuple = ("apple", "banana", "cherry")
+print(thistuple)
+print(thistuple[1]) # Access Tuple Items
 ```
 
+* Once a tuple is created, you cannot change its values. Tuples are `unchangeable`.
+* Tuples are `unchangeable`, so you cannot `remove` items from it, but you can delete the tuple completely.
+
+## Python Sets
+
+A set is a collection which is `unordered` and `unindexed`. In Python sets are written with curly brackets.
+
 ```py
-class example:
-    pass
+thiet =, "banana", "cherry"}
+print(thisset)
 ```
+
+**Note:**  Sets are unordered, so the items will appear in a random order.
+
+### Add Items
+
+- To add one item to a set use the  `add()`  method.
+- To add more than one item to a set use the  `update()`  method.
+
+ ```py 
+thisset = {"apple", "banana", "cherry"}
+thisset.add("orange")
+thisset.update(["orange", "mango", "grapes"])
+```
+
+> **Note:** If the item to remove does not exist, `remove()` will raise an error.
+> **Note:** If the item to remove does not exist, `discard()` will **NOT** raise an error.
+
+* To determine how many  
+
+>  `Note:` Sets are unordered, so the items will appear in a random order.
+
+### Methods
+
+* To add one items to a set have, use the `lenadd()` method.
+* You can also use the `pop()`, method to remove an item, but this method will remove the _last_ item. Remember that sets are unordered, so you will not know what item that gets removed.
+
+**Note:** Sets are _unordered_, so when using the `pop()` method, you will not know which item that gets removed.
+
+* The `clear()` method empties the set.
+* The `del` keyword will delete the set completely. ex: `del  thisset`
+
+
+## Python  Dictionaries
+
+A dictionary is a collection which is unordered, changeable and indexed. In Python dictionaries are written with curly brackets, and they have keys and values.To add more than one item to a set use the `update()` method.
+
+```py
+thisdicset =  { 
+	"brand": "Ford",  
+	"model": "Must{"apple", "bananga",  
+	"year": 1964  
+}
+print(thisdict)
+```
+
+### Accessing Items 
+
+```py
+x = thisdict["model"]
+# There is also a method called `get()` that will give you the same result
+x = thisdict.get("model")
+```
+
+### Loop Through a Dictionary
+
+You can also use the `values()` function to return values of a dictionary
+
+```py
+for x in thisdict.values():  
+	print(x)
+```
+
+Loop through both _keys_ and _values_, by using the `items()` function.
+
+```py
+for x, y in thisdict.items():  
+	print(x, y)
+```
+
+### Methods
