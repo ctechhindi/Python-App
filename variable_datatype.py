@@ -16,6 +16,8 @@ a = 1 + 2 + 3 + \
     4 + 5 + 6 + \
     7 + 8 + 9
 
+print("Multi-line statement Value : ", a)
+
 # Data types in Python
 root.info("Data types in Python")
 print(a, "is of type", type(a))
